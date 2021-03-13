@@ -11,8 +11,6 @@ import (
 
 var (
 	usersRestClient = rest.RequestBuilder{
-		// BaseURL: "https://api.bookstore.com",
-		// BaseURL: "localhost:8081",
 		BaseURL: "localhost",
 		Timeout: 100 * time.Millisecond,
 	}
@@ -24,7 +22,7 @@ type RestUsersRepository interface {
 
 type usersRepository struct{}
 
-func NewRepository() RestUsersRepository {
+func NewRestUsersRepository() RestUsersRepository {
 	return &usersRepository{}
 }
 
